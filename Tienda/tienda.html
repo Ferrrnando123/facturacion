@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ferretería MyShop</title>
+    <link rel="stylesheet" href="Css/tienda.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Nexus construction</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <i class="fa-solid fa-circle-user profile-icon"></i>
+    </header>
+
+    <nav>
+        <ul class="lista-desordenada-navbar">
+            <li class="home">Productos</li>
+            <li class="verificar-brecha">Carrito</li>
+            <li class="generar-contra">Inventario</li>
+            <li class="alertas">Notificaciones</li>
+            <li class="estadisticas">Facturas</li>
+            <li class="guia-de-seguridad">Chats</li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="category-tabs">
+            <div class="category-tab active" data-category="featured">Destacados</div>
+            <div class="category-tab" data-category="tools">Herramientas</div>
+            <div class="category-tab" data-category="hardware">Ferretería</div>
+            <div class="category-tab" data-category="materials">Materiales</div>
+            <div class="category-tab" data-category="offers">Ofertas</div>
+        </div>
+
+        <div class="featured-products">
+            <div class="featured-header">
+                <h2 class="section-title">Productos destacados</h2>
+                <a href="#" class="view-all">Ver todos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-badge new">Nuevo</div>
+                    <div class="product-image-container">
+                        <img src="https://th.bing.com/th/id/OIP.MYJbJ59TtMG5x06cWa5FGQHaHa?cb=iwp2&rs=1&pid=ImgDetMain">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Herramientas</span>
+                        <h3 class="product-name">Taladro Percutor 750W</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45)</span>
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">$89.99</span>
+                            <span class="product-old-price">$99.99</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button">
+                                <i class="fa-solid fa-cart-plus"></i> Comprar
+                            </button>
+                            <button class="wishlist-button">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge discount">-15%</div>
+                    <div class="product-image-container">
+                        <img src="https://cdn.shopify.com/s/files/1/0851/2244/products/30009.jpg?v=1617386454" alt="Juego de llaves">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Herramientas</span>
+                        <h3 class="product-name">Juego de Llaves Combinadas</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(32)</span>
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">$45.50</span>
+                            <span class="product-old-price">$53.50</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button">
+                                <i class="fa-solid fa-cart-plus"></i> Comprar
+                            </button>
+                            <button class="wishlist-button">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://th.bing.com/th/id/R.67a9213569c48f2a525e9e0643a59860?rik=rJsanFKQ2h1RsA&riu=http%3a%2f%2fpromart.vteximg.com.br%2farquivos%2fids%2f221642-1000-1000%2f21990.jpg%3fv%3d636159528506600000&ehk=9hPzmh02FZWFE3WvikuSKBzAQsOVsDLO2MOR%2bJZs9XY%3d&risl=&pid=ImgRaw&r=0" alt="Pintura blanca">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Materiales</span>
+                        <h3 class="product-name">Pintura Blanca Latex 4L</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(28)</span>
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">$34.99</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button">
+                                <i class="fa-solid fa-cart-plus"></i> Comprar
+                            </button>
+                            <button class="wishlist-button active">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://th.bing.com/th/id/OIP.7_E2odJMB5xTZTbsT-NQBAHaHa?w=191&h=191&c=7&r=0&o=7&cb=iwp2&dpr=1.3&pid=1.7&rm=3" alt="Candado de seguridad">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Ferretería</span>
+                        <h3 class="product-name">Candado de Seguridad Acero</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(19)</span>
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">$12.99</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button">
+                                <i class="fa-solid fa-cart-plus"></i> Comprar
+                            </button>
+                            <button class="wishlist-button">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tools" class="products-container">
+            <h2 class="section-title">Herramientas</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://th.bing.com/th/id/OIP.WdRbL2MU_1R9FnEnbxYoIQHaHa?w=203&h=203&c=7&r=0&o=7&cb=iwp2&dpr=1.3&pid=1.7&rm=3" alt="Taladro profesional">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Herramientas</span>
+                        <h3 class="product-name">Taladro Percutor 750W</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(45)</span>
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">$89.99</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button">
+                                <i class="fa-solid fa-cart-plus"></i> Comprar
+                            </button>
+                            <button class="wishlist-button">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge discount">-10%</div>
+                    <div class="product-image-container">
+                        <img src="https://th.bing.com/th/id/OIP.gVUSO9kGM4SCO1fJWeeJiwHaHa?cb=iwp2&rs=1&pid=ImgDetMain">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Herramientas</span>
+                        <h3 class="product-name">Juego de Llaves Combinadas</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(32)</span>
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">$45.50</span>
+                            <span class="product-old-price">$50.50</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button">
+                                <i class="fa-solid fa-cart-plus"></i> Comprar
+                            </button>
+                            <button class="wishlist-button">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-badge new">Nuevo</div>
+                    <div class="product-image-container">
+                        <img src="https://th.bing.com/th/id/OIP.jSSrbibIo72Ru9hfQK_1JAHaHa?cb=iwp2&rs=1&pid=ImgDetMain" alt="Sierra circular">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Herramientas</span>
+                        <h3 class="product-name">Sierra Circular 1200W</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(12)</span>
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">$129.99</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button">
+                                <i class="fa-solid fa-cart-plus"></i> Comprar
+                            </button>
+                            <button class="wishlist-button">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="hardware" class="products-container">
+            <h2 class="section-title">Ferretería</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://th.bing.com/th/id/OIP.7_E2odJMB5xTZTbsT-NQBAHaHa?cb=iwp2&rs=1&pid=ImgDetMain" alt="Candado de seguridad">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Ferretería</span>
+                        <h3 class="product-name">Candado de Seguridad Acero</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(19)</span>
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">$12.99</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button">
+                                <i class="fa-solid fa-cart-plus"></i> Comprar
+                            </button>
+                            <button class="wishlist-button">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-badge discount">-20%</div>
+                    <div class="product-image-container">
+                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_629384-MLV70182299863_062023-E.webp" alt="Tornillos y tuercas">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Ferretería</span>
+                        <h3 class="product-name">Juego de Tornillos y Tuercas</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span>(27)</span>
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">$8.99</span>
+                            <span class="product-old-price">$11.25</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button">
+                                <i class="fa-solid fa-cart-plus"></i> Comprar
+                            </button>
+                            <button class="wishlist-button">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="materials" class="products-container">
+            <h2 class="section-title">Materiales</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://th.bing.com/th/id/OIP.5xUQvLx4K9oq1kloIM9oigHaHa?cb=iwp2&rs=1&pid=ImgDetMain" alt="Pintura blanca">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Materiales</span>
+                        <h3 class="product-name">Pintura Blanca Latex 4L</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(28)</span>
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">$34.99</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button">
+                                <i class="fa-solid fa-cart-plus"></i> Comprar
+                            </button>
+                            <button class="wishlist-button">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-badge new">Nuevo</div>
+                    <div class="product-image-container">
+                        <img src="https://th.bing.com/th/id/OIP.t9PkyMrVZBBb8tFgEJqc2AHaHa?cb=iwp2&rs=1&pid=ImgDetMain" alt="Cemento">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Materiales</span>
+                        <h3 class="product-name">Cemento Gris 50kg</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span>(8)</span>
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">$15.99</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button">
+                                <i class="fa-solid fa-cart-plus"></i> Comprar
+                            </button>
+                            <button class="wishlist-button">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="tienda.js"></script>
+
+</body>
+
+</html>
