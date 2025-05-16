@@ -1,0 +1,510 @@
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Nexus construction</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="../Css/inventario.css">
+</head>
+
+<body class="bg-white font-sans min-h-screen flex flex-col">
+
+  <!-- SE HA ELIMINADO EL NAVBAR SUPERIOR -->
+
+   <header>
+        <div class="logo">Nexus construction</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <i class="fas fa-user-circle profile-icon"></i>
+    </header>
+
+ <nav>
+  <ul class="lista-desordenada-navbar">
+    <li class="verificar-brecha"><a href="tienda.html">Tienda</a></li>
+    <li class="generar-contra"><a href="inventario.html">Inventario</a></li>
+    <li class="alertas"><a href="notificaciones.html">Notificaciones</a></li>
+    <li class="guia-de-seguridad"><a href="chat.html">Chats</a></li>
+  </ul>
+</nav>
+
+
+ 
+
+  <!-- Contenido principal: Tabla inventario -->
+  <main class="flex-grow p-6 max-w-7xl mx-auto">
+    <h1 class="text-3xl font-bold text-slate-900 mb-6">Inventario de materiales</h1>
+    <div class="overflow-x-auto shadow rounded-lg border border-slate-200">
+      <table class="min-w-full divide-y divide-slate-200">
+        <thead class="bg-slate-100">
+          <tr>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">#</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">Material</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">Descripción</th>
+            <th scope="col" class="px-6 py-3 text-right text-xs font-semibold text-slate-700 uppercase tracking-wider">Precio (USD)</th>
+            <th scope="col" class="px-6 py-3 text-right text-xs font-semibold text-slate-700 uppercase tracking-wider">Cantidad</th>
+            <th scope="col" class="px-6 py-3 text-center text-xs font-semibold text-slate-700 uppercase tracking-wider">Estado</th>
+            <th scope="col" class="px-6 py-3 text-center text-xs font-semibold text-slate-700 uppercase tracking-wider">Imagen</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-slate-200" id="inventoryBody">
+
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">1</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Martillo</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Martillo de acero con mango de goma</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">25.0</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">20</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+              <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+              <img src="imagenes/img1.png" alt="Imagen producto 1" class="w-12 h-12 rounded object-cover mx-auto" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">2</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Destornillador</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Destornillador plano de 6 pulgadas</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">10.0</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">30</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+              <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+              <img src="imagenes/img2.png" alt="Imagen producto 2" class="w-12 h-12 rounded object-cover mx-auto" />
+            </td>
+          </tr>
+
+  <tr>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">3</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Clavos</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Caja de clavos de 1 pulgada (500)</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">25.0</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">10</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+      <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">Por agotarse</span>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+      <img src="imagenes/img3.jpg" alt="Imagen producto 3" class="w-12 h-12 rounded object-cover mx-auto" />
+    </td>
+  </tr>
+
+  <tr>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">4</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Taladro</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Taladro eléctrico de 500w</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">100.0</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">10</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+      <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">Por agotarse</span>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+      <img src="imagenes/img4.jpg" alt="Imagen producto 4" class="w-12 h-12 rounded object-cover mx-auto" />
+    </td>
+  </tr>
+
+  <tr>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">5</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Llave Inglesa</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Llave ajustable de acero 12 pulgadas</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">15.0</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">15</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+      <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+      <img src="imagenes/img5.jpg" alt="Imagen producto 5" class="w-12 h-12 rounded object-cover mx-auto" />
+    </td>
+  </tr>
+
+  <tr>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">6</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Cinta metrica</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Cinta medidora 10mts</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">10.0</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">10</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+      <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">Por agotarse</span>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+      <img src="imagenes/img6.jpg" alt="Imagen producto 6" class="w-12 h-12 rounded object-cover mx-auto" />
+    </td>
+  </tr>
+
+
+  <tr>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">7</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Casco de seguridad</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">casco protector anti golpes</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">30.0</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">15</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+    <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold 
+      bg-green-100 text-green-800">En stock</span>
+   </td>
+   <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+    <img src="imagenes/img7.jpg" alt="Imagen producto 7" class="w-12 h-12 rounded object-cover mx-auto">
+
+   </td>
+  </tr>
+
+  <tr>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">8</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Compresor de aire</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">maquina de compresion de aire 80psi</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">150.0</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">5</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+    <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold 
+      bg-yellow-100 text-yellow-800">Por agotarse</span>
+   </td>
+   <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+    <img src="imagenes/img8.jpg" alt="Imagen producto 8" class="w-12 h-12 rounded object-cover mx-auto">
+
+   </td>
+  </tr>
+
+  <tr>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">9</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Pintura blanca</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Galón de pintura blanca mate</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">35.0</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">8</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+    <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold 
+      bg-yellow-100 text-yellow-800">Por agotarse</span>
+   </td>
+   <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+    <img src="imagenes/img9.jpg" alt="Imagen producto 9" class="w-12 h-12 rounded object-cover mx-auto">
+
+   </td>
+  </tr>
+
+  <tr>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">10</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Taladro inalámbrico</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Taladro inalámbrico con batería recargable</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">120.0</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">12</td>
+   <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+    <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold 
+      bg-green-100 text-green-800">En stock</span>
+   </td>
+   <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+    <img src="imagenes/img10.jpg" alt="Imagen producto 10" class="w-12 h-12 rounded object-cover mx-auto">
+
+   </td>
+  </tr>
+
+  <tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">11</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Pintura blanca</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Baldes de pintura blanca mate 4L</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">45.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">12</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img11.jpg" alt="Imagen producto 11" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">12</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Cemento</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Saco de cemento de 50kg</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">8.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">8</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">Por agotarse</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img12.jpg" alt="Imagen producto 12" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">13</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Ladrillos</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Caja con 50 ladrillos rojos</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">60.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">25</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img13.jpg" alt="Imagen producto 13" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">14</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Cable eléctrico</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Rollo de cable 100m</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">120.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">9</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">Por agotarse</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img14.jpg" alt="Imagen producto 14" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">15</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Tornillos</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Caja con 200 tornillos de 2 pulgadas</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">18.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">Agotado</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img15.jpg" alt="Imagen producto 15" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">16</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Escuadra</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Escuadra metálica 30cm</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">12.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">14</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img16.jpg" alt="Imagen producto 16" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">17</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Pala</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Pala de acero con mango de madera</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">35.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">7</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">Por agotarse</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img17.png" alt="Imagen producto 17" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">18</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Cuerda</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Rollo de cuerda nylon 50m</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">20.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">3</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">Agotado</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img18.jpg" alt="Imagen producto 18" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">19</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Pintura roja</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Baldes de pintura roja 4L</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">50.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">20</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img19.jpg" alt="Imagen producto 19" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">20</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Andamios</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Andamios metálicos para construcción</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">5.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">2</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">Agotado</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img20.jpg" alt="Imagen producto 20" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+ <tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">21</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Martillo</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Martillo de acero con mango de madera</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">25.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">15</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img21.jpg" alt="Imagen producto 21" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">22</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Llave inglesa</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Llave inglesa ajustable 10"</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">30.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">7</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">Por agotarse</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img22.jpg" alt="Imagen producto 22" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">23</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Taladro</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Taladro eléctrico inalámbrico 18V</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">150.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">3</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">Agotado</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+   <img src="imagenes/img23.jpg" alt="Imagen producto 23" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">24</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Nivel</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Nivel de burbuja 60cm</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">22.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">11</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img24.jpg" alt="Imagen producto 24" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">25</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Sierra</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Sierra manual de 18 pulgadas</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">40.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">6</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">Por agotarse</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img25.png" alt="Imagen producto 25" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">26</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Cinta métrica</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Cinta métrica 5m</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">10.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">18</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+   <img src="imagenes/img26.jpg" alt="Imagen producto 26" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">27</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Pintura azul</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Baldes de pintura azul 4L</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">55.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">Agotado</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img27.jpg" alt="Imagen producto 27" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">28</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Escalera</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Escalera plegable aluminio 3m</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">80.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">9</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">Por agotarse</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img28.jpg" alt="Imagen producto 28" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">29</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Destornillador</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Juego de destornilladores 6 piezas</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">15.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">13</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img29.jpg" alt="Imagen producto 29" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+
+<tr>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">30</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Pintura negra</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Baldes de pintura negra 4L</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">48.0</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">21</td>
+ <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+  <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
+ </td>
+ <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+  <img src="imagenes/img30.jpg" alt="Imagen producto 30" class="w-12 h-12 rounded object-cover mx-auto">
+
+ </td>
+</tr>
+</tbody>
+ </table>
+ <p id="noResults" class="text-center text-red-500 hidden">No se han encontrado resultados.</p>
+
+   </div>
+  </main>
+  <script src="../javascript/inventario.js"></script>
+ </body>
+</html>
