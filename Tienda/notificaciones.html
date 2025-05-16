@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Css/notificaciones.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">Nexus construction</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <i class="fa-solid fa-circle-user profile-icon"></i>
+    </header>
+
+   <nav>
+    <ul class="lista-desordenada-navbar">
+        <li class="verificar-brecha"><a href="tienda.html">Tienda</a></li>
+        <li class="generar-contra"><a href="../fronted/index (3).html">Inventario</a></li>
+        <li class="alertas"><a href="notificaciones.html">Notificaciones</a></li>
+        <li class="guia-de-seguridad"><a href="chat.html">Chats</a></li>
+    </ul>
+</nav>
+
+    <div class="container">
+        <div class="notification-tabs">
+            <div class="tab active" data-filter="all">Todas</div>
+            <div class="tab" data-filter="low">Stock Bajo</div>
+            <div class="tab" data-filter="out">Agotados</div>
+            <div class="tab" data-filter="excess">Excesos</div>
+        </div>
+
+        <div class="notification-list">
+            <div class="notification-card" data-type="out">
+                <div class="notification-status critical"></div>
+                <div class="notification-content">
+                    <div class="notification-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <div class="notification-text">
+                        <h3>Tornillos cabeza hexagonal 1/2" <span class="priority-tag priority-high">Crítico</span></h3>
+                        <p>El producto se ha agotado. Última venta hace 2 horas.</p>
+                        <div class="notification-meta">
+                            <span><i class="fas fa-cubes"></i> SKU: TORN-HX-1250</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Pasillo 3, Estante B</span>
+                            <span><i class="fas fa-clock"></i> Hoy, 10:45 AM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-actions">
+                    <button class="action-btn" title="Marcar como leído"><i class="far fa-check-circle"></i></button>
+                    <button class="action-btn" title="Pedir reposición"><i class="fas fa-truck"></i></button>
+                    <button class="action-btn" title="Más opciones"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+
+            <div class="notification-card" data-type="low">
+                <div class="notification-status"></div>
+                <div class="notification-content">
+                    <div class="notification-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="notification-text">
+                        <h3>Pintura blanca mate 4L <span class="priority-tag priority-medium">Urgente</span></h3>
+                        <p>Quedan 3 unidades en stock (nivel mínimo: 5). Tasa de venta: 5/día.</p>
+                        <div class="notification-meta">
+                            <span><i class="fas fa-cubes"></i> SKU: PINT-WH-M400</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Pasillo 1, Estante A</span>
+                            <span><i class="fas fa-clock"></i> Hoy, 9:30 AM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-actions">
+                    <button class="action-btn" title="Marcar como leído"><i class="far fa-check-circle"></i></button>
+                    <button class="action-btn" title="Pedir reposición"><i class="fas fa-truck"></i></button>
+                    <button class="action-btn" title="Más opciones"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+
+            <div class="notification-card" data-type="excess">
+                <div class="notification-status success"></div>
+                <div class="notification-content">
+                    <div class="notification-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div class="notification-text">
+                        <h3>Destornilladores Phillips #2 <span class="priority-tag priority-low">Baja prioridad</span>
+                        </h3>
+                        <p>Exceso de inventario: 45 unidades (nivel máximo recomendado: 30). Tasa de venta: 2/semana.
+                        </p>
+                        <div class="notification-meta">
+                            <span><i class="fas fa-cubes"></i> SKU: DEST-PH2-100</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Pasillo 2, Estante C</span>
+                            <span><i class="fas fa-clock"></i> Ayer, 4:15 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-actions">
+                    <button class="action-btn" title="Marcar como leído"><i class="far fa-check-circle"></i></button>
+                    <button class="action-btn" title="Crear promoción"><i class="fas fa-percentage"></i></button>
+                    <button class="action-btn" title="Más opciones"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+
+            <div class="notification-card" data-type="low">
+                <div class="notification-status"></div>
+                <div class="notification-content">
+                    <div class="notification-icon">
+                        <i class="fas fa-calendar-times"></i>
+                    </div>
+                    <div class="notification-text">
+                        <h3>Adhesivo epóxico 250ml <span class="priority-tag priority-medium">Urgente</span></h3>
+                        <p>5 unidades próximas a vencer en 15 días. Fecha de vencimiento: 30/05/2023.</p>
+                        <div class="notification-meta">
+                            <span><i class="fas fa-cubes"></i> SKU: ADH-EPX-250</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Pasillo 4, Estante D</span>
+                            <span><i class="fas fa-clock"></i> Ayer, 2:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-actions">
+                    <button class="action-btn" title="Marcar como leído"><i class="far fa-check-circle"></i></button>
+                    <button class="action-btn" title="Crear promoción"><i class="fas fa-percentage"></i></button>
+                    <button class="action-btn" title="Más opciones"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+
+            <div class="notification-card" data-type="out">
+                <div class="notification-status critical"></div>
+                <div class="notification-content">
+                    <div class="notification-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <div class="notification-text">
+                        <h3>Llave inglesa 10" <span class="priority-tag priority-high">Crítico</span></h3>
+                        <p>El producto se ha agotado. Última venta hace 1 hora.</p>
+                        <div class="notification-meta">
+                            <span><i class="fas fa-cubes"></i> SKU: LLAV-ENG-10</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Pasillo 5, Estante A</span>
+                            <span><i class="fas fa-clock"></i> Hoy, 11:30 AM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-actions">
+                    <button class="action-btn" title="Marcar como leído"><i class="far fa-check-circle"></i></button>
+                    <button class="action-btn" title="Pedir reposición"><i class="fas fa-truck"></i></button>
+                    <button class="action-btn" title="Más opciones"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+
+            <div class="notification-card" data-type="excess">
+                <div class="notification-status success"></div>
+                <div class="notification-content">
+                    <div class="notification-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div class="notification-text">
+                        <h3>Guantes de trabajo <span class="priority-tag priority-low">Baja prioridad</span></h3>
+                        <p>Exceso de inventario: 120 pares (nivel máximo recomendado: 80). Tasa de venta: 10/mes.</p>
+                        <div class="notification-meta">
+                            <span><i class="fas fa-cubes"></i> SKU: GUAN-TRAB-01</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Pasillo 1, Estante D</span>
+                            <span><i class="fas fa-clock"></i> Ayer, 5:20 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-actions">
+                    <button class="action-btn" title="Marcar como leído"><i class="far fa-check-circle"></i></button>
+                    <button class="action-btn" title="Crear promoción"><i class="fas fa-percentage"></i></button>
+                    <button class="action-btn" title="Más opciones"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="notificaciones.js">
+    </script>
+</body>
+
+</html>
