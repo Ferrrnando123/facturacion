@@ -5,27 +5,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   searchInput.addEventListener('input', () => {
     const filtro = searchInput.value.toLowerCase().trim();
-
-    let filas = Array.from(inventoryBody.querySelectorAll('tr'));
+    const filas = Array.from(inventoryBody.querySelectorAll('tr'));
     let filasMostradas = 0;
 
     filas.forEach(fila => {
-      // Buscamos texto en toda la fila
       const textoFila = fila.textContent.toLowerCase();
-
       if (textoFila.includes(filtro)) {
-        fila.style.display = ''; // mostrar fila
+        fila.style.display = '';
         filasMostradas++;
       } else {
-        fila.style.display = 'none'; // ocultar fila
+        fila.style.display = 'none';
       }
     });
 
-    // Mostrar u ocultar mensaje "No hay resultados"
-    if (filasMostradas === 0) {
-      noResults.classList.remove('hidden');
-    } else {
-      noResults.classList.add('hidden');
-    }
+    noResults.style.display = (filasMostradas === 0) ? 'block' : 'none';
   });
 });
