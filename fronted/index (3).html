@@ -1,101 +1,84 @@
 <html lang="es">
- 
- <head>
+<head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title>Nexus construction</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="inventario.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
- </head>
- 
- <body class="bg-white font-sans min-h-screen flex flex-col">
-  <!-- Navbar top -->
-  <nav class="bg-slate-900 text-white flex items-center justify-between px-4 md:px-8 py-3 relative">
-   <span class="text-orange-600 font-bold text-2xl select-none">Nexus construction</span>
-   <div class="flex-1 flex justify-center">
-    <div class="relative w-full max-w-xs">
-     
-     <input
-       class="bg-slate-800 placeholder-slate-400 text-white text-xs rounded px-3 py-1 pr-8 w-full focus:outline-none"
-       placeholder="Buscar productos..."
-       type="text"
-       id="searchInput"
-       onkeyup="filterTable()"
-     />
-     
-     <button class="absolute right-1 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white" aria-label="Buscar">
-      <i class="fas fa-search"></i>
-     </button>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="bg-white font-sans min-h-screen flex flex-col">
+
+  <!-- SE HA ELIMINADO EL NAVBAR SUPERIOR -->
+
+  <header>
+    <div class="logo">Nexus construction</div>
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar productos...">
+        <i class="fa-solid fa-magnifying-glass"></i>
     </div>
-   </div>
-   
-   <button aria-label="User profile" class="text-orange-600 text-lg ml-4">
-    <i class="fas fa-user-circle"></i>
-   </button>
-   
+    <i class="fa-solid fa-circle-user profile-icon"></i>
+  </header>
+
+  <nav>
+    <ul class="lista-desordenada-navbar">
+        <li class="verificar-brecha"><a href="tienda.html">Tienda</a></li>
+        <li class="generar-contra">Inventario</li>
+        <li class="alertas"><a href="notificaciones.html">Notificaciones</a></li>
+        <li class="guia-de-seguridad"><a href="chat.html">Chats</a></li>
+    </ul>
   </nav>
-  <!-- Navbar bottom -->
-    <nav class="bg-slate-900 text-white flex items-center justify-start px-4 md:px-8 py-3 select-none space-x-48 text-lg">
-  <a class="text-white hover:bg-blue-300 hover:bg-opacity-30 rounded px-3 py-1 transition-colors duration-300 cursor-pointer" href="#">Productos</a>
-  <a class="text-white hover:bg-blue-300 hover:bg-opacity-30 rounded px-3 py-1 transition-colors duration-300 cursor-pointer" href="#">Inventario</a>
-  <a class="text-white hover:bg-blue-300 hover:bg-opacity-30 rounded px-3 py-1 transition-colors duration-300 cursor-pointer" href="#">Notificaciones</a>
-  <a class="text-white hover:bg-blue-300 hover:bg-opacity-30 rounded px-3 py-1 transition-colors duration-300 cursor-pointer" href="#">Facturas</a>
-  <a class="text-white hover:bg-blue-300 hover:bg-opacity-30 rounded px-3 py-1 transition-colors duration-300 cursor-pointer" href="#">Chats</a>
-</nav>
 
-<!-- Buscador y mensaje van FUERA de la tabla -->
-
-<p id="noResults" class="text-center text-red-500 hidden">No se han encontrado resultados.</p>
+  <!-- Buscador y mensaje van FUERA de la tabla -->
+  <p id="noResults" class="text-center text-red-500 hidden">No se han encontrado resultados.</p>
 
   <!-- Contenido principal: Tabla inventario -->
   <main class="flex-grow p-6 max-w-7xl mx-auto">
-   <h1 class="text-3xl font-bold text-slate-900 mb-6">Inventario de materiales</h1>
-   <div class="overflow-x-auto shadow rounded-lg border border-slate-200">
-    <table class="min-w-full divide-y divide-slate-200">
-    <thead class="bg-slate-100">
-      
-      <tr>
-       <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">#</th>
-       <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">Material</th>
-       <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">Descripción</th>
-       <th scope="col" class="px-6 py-3 text-right text-xs font-semibold text-slate-700 uppercase tracking-wider">Precio (USD)</th>
-       <th scope="col" class="px-6 py-3 text-right text-xs font-semibold text-slate-700 uppercase tracking-wider">Cantidad</th>
-       <th scope="col" class="px-6 py-3 text-center text-xs font-semibold text-slate-700 uppercase tracking-wider">Estado</th>
-       <th scope="col" class="px-6 py-3 text-center text-xs font-semibold text-slate-700 uppercase tracking-wider">Imagen</th>
-     </tr>
-     
-    </thead>
-     
-     <tbody class="bg-white divide-y divide-slate-200" id="inventoryBody">
+    <h1 class="text-3xl font-bold text-slate-900 mb-6">Inventario de materiales</h1>
+    <div class="overflow-x-auto shadow rounded-lg border border-slate-200">
+      <table class="min-w-full divide-y divide-slate-200">
+        <thead class="bg-slate-100">
+          <tr>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">#</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">Material</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider">Descripción</th>
+            <th scope="col" class="px-6 py-3 text-right text-xs font-semibold text-slate-700 uppercase tracking-wider">Precio (USD)</th>
+            <th scope="col" class="px-6 py-3 text-right text-xs font-semibold text-slate-700 uppercase tracking-wider">Cantidad</th>
+            <th scope="col" class="px-6 py-3 text-center text-xs font-semibold text-slate-700 uppercase tracking-wider">Estado</th>
+            <th scope="col" class="px-6 py-3 text-center text-xs font-semibold text-slate-700 uppercase tracking-wider">Imagen</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-slate-200" id="inventoryBody">
 
-  <tr>
-    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">1</td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Martillo</td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Martillo de acero con mango de goma</td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">25.0</td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">20</td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
-      <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
-    </td>
-    <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
-      <img src="imagenes/img1.png" alt="Imagen producto 1" class="w-12 h-12 rounded object-cover mx-auto" />
-    </td>
-  </tr>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">1</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Martillo</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Martillo de acero con mango de goma</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">25.0</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">20</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+              <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+              <img src="imagenes/img1.png" alt="Imagen producto 1" class="w-12 h-12 rounded object-cover mx-auto" />
+            </td>
+          </tr>
 
-  <tr>
-    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">2</td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Destornillador</td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Destornillador plano de 6 pulgadas</td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">10.0</td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">30</td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
-      <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
-    </td>
-    <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
-      <img src="imagenes/img2.png" alt="Imagen producto 2" class="w-12 h-12 rounded object-cover mx-auto" />
-    </td>
-  </tr>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">2</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">Destornillador</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">Destornillador plano de 6 pulgadas</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">10.0</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 text-right">30</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+              <span class="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">En stock</span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-slate-700">
+              <img src="imagenes/img2.png" alt="Imagen producto 2" class="w-12 h-12 rounded object-cover mx-auto" />
+            </td>
+          </tr>
 
   <tr>
     <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">3</td>
