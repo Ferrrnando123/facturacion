@@ -6,35 +6,33 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="inventario.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-white font-sans min-h-screen flex flex-col">
 
-  <!-- header y navbar -->
+  <!-- SE HA ELIMINADO EL NAVBAR SUPERIOR -->
 
-  <header>
-    <div class="logo">Nexus construction</div>
-    <div class="search-bar">
-        <input type="text" placeholder="Buscar productos...">
-        <i class="fa-solid fa-magnifying-glass"></i>
-    </div>
-    <i class="fa-solid fa-circle-user profile-icon"></i>
-  </header>
+ <header>
+  <div class="logo">Nexus construction</div>
+  <div class="search-bar">
+    <input id="searchInput" type="text" placeholder="Buscar productos...">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+  <i class="fa-solid fa-circle-user profile-icon"></i>
+</header>
+
 
   <nav>
     <ul class="lista-desordenada-navbar">
-        <li class="verificar-brecha"><a href="Tienda/tienda.html">Tienda</a></li>
+        <li class="verificar-brecha"><a href="tienda.html">Tienda</a></li>
         <li class="generar-contra">Inventario</li>
         <li class="alertas"><a href="notificaciones.html">Notificaciones</a></li>
         <li class="guia-de-seguridad"><a href="chat.html">Chats</a></li>
     </ul>
   </nav>
 
-  <!-- final de header y navbar -->
-
-  <!-- Buscador y mensaje van FUERA de la tabla -->
-  <p id="noResults" class="text-center text-red-500 hidden">No se han encontrado resultados.</p>
+ 
 
   <!-- Contenido principal: Tabla inventario -->
   <main class="flex-grow p-6 max-w-7xl mx-auto">
@@ -504,6 +502,8 @@
 </tr>
 </tbody>
  </table>
+ <p id="noResults" class="text-center text-red-500 hidden">No se han encontrado resultados.</p>
+
    </div>
   </main>
  </body>
