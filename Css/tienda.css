@@ -302,7 +302,49 @@
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+        .checkout-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+.checkout-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.checkout-content input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+/* Estilos para el botón de descarga PDF */
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: all 0.3s;
+}
 
+.download-btn:hover {
+    background: #2ecc71;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+@media print {
+    .download-btn {
+        display: none !important;
+    }
+}
         @media (max-width: 768px) {
             main {
                 padding: 20px 15px;
