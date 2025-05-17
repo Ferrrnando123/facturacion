@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (modal.classList.contains('active')) this.updateCartUI();
         },
 
-        // Proceso de pago
+        // Proceso de pago ACTUALIZADO con nuevos campos
         checkout: async function() {
             if (this.items.length === 0) {
                 alert("¡El carrito está vacío!");
@@ -147,16 +147,21 @@ document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('checkoutModal');
             modal.style.display = 'flex';
 
-            // Resetear formulario
+            // Resetear formulario (ahora con 4 campos)
             document.getElementById('checkout-name').value = '';
             document.getElementById('checkout-email').value = '';
+            document.getElementById('checkout-address').value = '';
+            document.getElementById('checkout-phone').value = '';
 
             // Configurar botón de confirmación
             document.getElementById('confirm-checkout').onclick = async () => {
                 const nombre = document.getElementById('checkout-name').value.trim();
                 const correo = document.getElementById('checkout-email').value.trim();
+                const direccion = document.getElementById('checkout-address').value.trim();
+                const telefono = document.getElementById('checkout-phone').value.trim();
 
-                if (!nombre || !correo) {
+                // Validación de campos obligatorios (4 campos)
+                if (!nombre || !correo || !direccion || !telefono) {
                     alert("Por favor completa todos los campos");
                     return;
                 }
@@ -165,6 +170,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(correo)) {
                     alert("Por favor ingresa un correo electrónico válido");
+                    return;
+                }
+
+                // Validar teléfono (nueva validación)
+                const phoneRegex = /^[\d\s+-]{8,}$/;
+                if (!phoneRegex.test(telefono)) {
+                    alert("Por favor ingresa un número de teléfono válido (mínimo 8 dígitos)");
                     return;
                 }
 
@@ -181,6 +193,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const formData = new FormData();
                 formData.append("Nombre", nombre);
                 formData.append("Correo", correo);
+                formData.append("Direccion", direccion);
+                formData.append("Telefono", telefono);
                 formData.append("Productos", productosHTML);
                 formData.append("Total", this.total.toFixed(2));
 
