@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura Nexus Construction</title>
+    <link rel="stylesheet" href="../Css/factura.css">
+</head>
+<body>
+    <div class="factura">
+        <div class="encabezado">
+            <div class="logo">NEXUS CONSTRUCTION</div>
+            <h2>FACTURA #{numeroFactura}</h2>
+        </div>
+        
+        <div class="info-cliente">
+            <p><strong>Fecha:</strong> {fecha}</p>
+            <p><strong>Cliente:</strong> {nombre}</p>
+            <p><strong>Correo:</strong> {correo}</p>
+            <p><strong>Dirección:</strong> {direccion}</p>
+            <p><strong>Teléfono:</strong> {telefono}</p>
+        </div>
+        
+        <div style="padding: 25px;">
+            <table class="tabla-productos">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>P. Unitario</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {productos}
+                </tbody>
+                <tfoot>
+                    <tr class="total">
+                        <td colspan="3">TOTAL</td>
+                        <td>${total}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        
+        <div class="pie">
+            <p>¡Gracias por su compra en Nexus Construction!</p>
+            <p>Para cualquier aclaración: contacto@nexusconstruction.com</p>
+            <a href="#" class="btn-descarga" onclick="window.print()">Descargar PDF</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Contenedor principal */
+.factura {
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Encabezado */
+.encabezado {
+    background: #2c3e50;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 5px solid #f39c12;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+
+/* Info del cliente */
+.info-cliente {
+    padding: 25px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+.info-cliente p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.info-cliente strong {
+    color: #2c3e50;
+    display: inline-block;
+    width: 80px;
+}
+
+/* Tabla de productos */
+.tabla-productos {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.tabla-productos th {
+    background: #f39c12;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabla-productos td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.tabla-productos tr:last-child td {
+    border-bottom: none;
+}
+
+/* Total */
+.total {
+    font-weight: bold;
+    font-size: 18px;
+    background: #f8f9fa;
+}
+
+/* Pie de página */
+.pie {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+}
+
+/* Botón de descarga */
+.btn-descarga {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-descarga:hover {
+    background: #2ecc71;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .info-cliente p {
+        font-size: 14px;
+    }
+    
+    .tabla-productos th, 
+    .tabla-productos td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
