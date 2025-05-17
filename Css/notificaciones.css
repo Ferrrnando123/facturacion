@@ -245,64 +245,6 @@ body {
 .hidden {
     display: none;
 }
-.notifications-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.notification-card {
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    align-items: center;
-    padding: 15px;
-    border-radius: 8px;
-    background: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: all 0.3s;
-}
-
-.notification-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.notification-card.critical {
-    border-left: 4px solid #ef4444;
-}
-
-.notification-card.warning {
-    border-left: 4px solid #f59e0b;
-}
-
-.notification-icon {
-    font-size: 24px;
-    text-align: center;
-}
-
-.notification-icon .fa-fire {
-    color: #ef4444;
-}
-
-.notification-icon .fa-exclamation-triangle {
-    color: #f59e0b;
-}
-
-.tag {
-    @apply text-white px-2 py-1 rounded-full text-xs;
-}
-
-.mark-read {
-    background: none;
-    border: none;
-    color: #6b7280;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.mark-read:hover {
-    color: #3b82f6;
-}
 
 /* Responsive */
 @media (max-width: 768px) {

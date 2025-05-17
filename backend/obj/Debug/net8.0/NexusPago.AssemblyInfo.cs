@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NexusPago")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+938d585a0d571925e350df9ece761324f66d935b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9168dd4dd6182a40ae3ba19418685275b9a55d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("NexusPago")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NexusPago")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
