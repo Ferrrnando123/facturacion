@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\canib\\OneDrive - Universidad Don Bosco\\Documentos\\facturacion\\Backend\\NexusPago.csproj": {}
+    "C:\\Users\\canib\\OneDrive - Universidad Don Bosco\\Documentos\\GitHub\\facturacion\\backend\\NexusPago.csproj": {}
   },
   "projects": {
-    "C:\\Users\\canib\\OneDrive - Universidad Don Bosco\\Documentos\\facturacion\\Backend\\NexusPago.csproj": {
+    "C:\\Users\\canib\\OneDrive - Universidad Don Bosco\\Documentos\\GitHub\\facturacion\\backend\\NexusPago.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\canib\\OneDrive - Universidad Don Bosco\\Documentos\\facturacion\\Backend\\NexusPago.csproj",
+        "projectUniqueName": "C:\\Users\\canib\\OneDrive - Universidad Don Bosco\\Documentos\\GitHub\\facturacion\\backend\\NexusPago.csproj",
         "projectName": "NexusPago",
-        "projectPath": "C:\\Users\\canib\\OneDrive - Universidad Don Bosco\\Documentos\\facturacion\\Backend\\NexusPago.csproj",
+        "projectPath": "C:\\Users\\canib\\OneDrive - Universidad Don Bosco\\Documentos\\GitHub\\facturacion\\backend\\NexusPago.csproj",
         "packagesPath": "C:\\Users\\canib\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\canib\\OneDrive - Universidad Don Bosco\\Documentos\\facturacion\\Backend\\obj\\",
+        "outputPath": "C:\\Users\\canib\\OneDrive - Universidad Don Bosco\\Documentos\\GitHub\\facturacion\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

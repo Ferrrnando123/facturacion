@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y+DzHp8KOKE=",
+  "dgSpecHash": "wvtNVB/daJg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\canib\\OneDrive - Universidad Don Bosco\\Documentos\\facturacion\\Backend\\NexusPago.csproj",
+  "projectFilePath": "C:\\Users\\canib\\OneDrive - Universidad Don Bosco\\Documentos\\GitHub\\facturacion\\backend\\NexusPago.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\canib\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\canib\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
