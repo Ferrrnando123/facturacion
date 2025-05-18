@@ -1,3 +1,5 @@
+/* SEGMENTO QUE EFECTUA LA FACTURA */
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors();
 
@@ -41,3 +43,8 @@ app.MapPost("/procesar-pago", async (HttpRequest request) =>
 });
 
 app.Run();
+
+/* FINAL DEL SEGMENTO QUE EFECTUA LA FACTURA*/
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
